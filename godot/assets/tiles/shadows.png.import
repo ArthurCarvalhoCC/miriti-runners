@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brxtk85stg4uh"
-path="res://.godot/imported/street_tile.png-b348e13ae6e19dff5d2f7399017d8cbc.ctex"
+uid="uid://cuwebvpxhf2hi"
+path="res://.godot/imported/shadows.png-2af76e04e39cbd111e141a3eec67d90a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/street_tile.png"
-dest_files=["res://.godot/imported/street_tile.png-b348e13ae6e19dff5d2f7399017d8cbc.ctex"]
+source_file="res://assets/tiles/shadows.png"
+dest_files=["res://.godot/imported/shadows.png-2af76e04e39cbd111e141a3eec67d90a.ctex"]
 
 [params]
 

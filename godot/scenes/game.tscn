@@ -46,7 +46,7 @@ ignore_camera_scroll = true
 script = ExtResource("1_iywne")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level/Sombras" unique_id=1303801776]
-modulate = Color(1, 1, 1, 0.5529412)
+modulate = Color(0.8993778, 0.05371011, 1.1551381e-06, 0.60784316)
 z_index = 2
 position = Vector2(280, 400)
 scale = Vector2(4, 4)

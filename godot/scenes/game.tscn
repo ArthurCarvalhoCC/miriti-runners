@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://bngdwjuyuwakx"]
 
 [ext_resource type="Script" uid="uid://de3bh23t8yx6k" path="res://scripts/scenes/Parallax2d.cs" id="1_iywne"]
-[ext_resource type="Texture2D" uid="uid://d4afby6bhndvo" path="res://icon.svg" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://c18chk8xamwlf" path="res://assets/tiles/concrete_path.png" id="2_gee14"]
 [ext_resource type="PackedScene" uid="uid://np87cylqwp40" path="res://scenes/enemy_2d.tscn" id="2_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://brxtk85stg4uh" path="res://assets/tiles/street_tile.png" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://bbsanf58fwpox" path="res://scenes/player.tscn" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://dn3r8cov4p76l" path="res://scripts/scenes/EnemySpawner.cs" id="3_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://cuwebvpxhf2hi" path="res://assets/tiles/tree_shadows.png" id="3_vtaks"]
+[ext_resource type="Texture2D" uid="uid://dfsvm7wfeni6k" path="res://assets/tiles/forest.png" id="4_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://7banvpghhnsj" path="res://scenes/enemies/motorcycle.tscn" id="5_p57ef"]
+[ext_resource type="Texture2D" uid="uid://c3obg8flxmlme" path="res://assets/tiles/trees.png" id="5_vtaks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4g3bo"]
 size = Vector2(286, 662)
@@ -21,29 +25,71 @@ size = Vector2(126, 11)
 [node name="Level" type="Node2D" parent="." unique_id=1282701317]
 position = Vector2(-580, -324)
 
-[node name="Parallax2D" type="Parallax2D" parent="Level" unique_id=755510698]
-repeat_size = Vector2(0, 649)
+[node name="Arvores" type="Parallax2D" parent="Level" unique_id=581362194]
+z_index = 3
+repeat_size = Vector2(0, 1024)
 autoscroll = Vector2(0, 100)
 follow_viewport = false
 ignore_camera_scroll = true
 script = ExtResource("1_iywne")
 
-[node name="Rua" type="Sprite2D" parent="Level/Parallax2D" unique_id=499688344]
-modulate = Color(0.3102, 0.33, 0.31185, 1)
-position = Vector2(1018.99994, 320)
-scale = Vector2(2.1875, 5.0859375)
-texture = ExtResource("1_uwrxv")
+[node name="Sprite2D" type="Sprite2D" parent="Level/Arvores" unique_id=1091656182]
+position = Vector2(248, 316)
+scale = Vector2(4, 4)
+texture = ExtResource("5_vtaks")
 
-[node name="Calcada" type="Sprite2D" parent="Level/Parallax2D" unique_id=682875711]
-position = Vector2(579, 322)
-scale = Vector2(4.6874995, 5.0859375)
-texture = ExtResource("1_uwrxv")
+[node name="Sombras" type="Parallax2D" parent="Level" unique_id=1277347850]
+repeat_size = Vector2(0, 1024)
+autoscroll = Vector2(0, 100)
+follow_viewport = false
+ignore_camera_scroll = true
+script = ExtResource("1_iywne")
 
-[node name="Floresta" type="Sprite2D" parent="Level/Parallax2D" unique_id=1641274163]
-modulate = Color(0.37221208, 0.61557513, 3.85046e-07, 1)
-position = Vector2(140, 316.5)
-scale = Vector2(2.1875, 5.0859375)
-texture = ExtResource("1_uwrxv")
+[node name="Sprite2D" type="Sprite2D" parent="Level/Sombras" unique_id=1303801776]
+modulate = Color(1, 1, 1, 0.5529412)
+z_index = 2
+position = Vector2(280, 400)
+scale = Vector2(4, 4)
+texture = ExtResource("3_vtaks")
+
+[node name="Calcada" type="Parallax2D" parent="Level" unique_id=493621676]
+repeat_size = Vector2(0, 1024)
+autoscroll = Vector2(0, 100)
+follow_viewport = false
+ignore_camera_scroll = true
+script = ExtResource("1_iywne")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Calcada" unique_id=1830213010]
+z_index = -1
+position = Vector2(580, 320)
+scale = Vector2(4, 4)
+texture = ExtResource("2_gee14")
+
+[node name="Rua" type="Parallax2D" parent="Level" unique_id=330106772]
+repeat_size = Vector2(0, 256)
+autoscroll = Vector2(0, 100)
+repeat_times = 5
+follow_viewport = false
+ignore_camera_scroll = true
+script = ExtResource("1_iywne")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Rua" unique_id=1395665694]
+position = Vector2(1280, 0)
+scale = Vector2(4, 4)
+texture = ExtResource("2_u5sy4")
+offset = Vector2(64, 0)
+
+[node name="Grama" type="Parallax2D" parent="Level" unique_id=755510698]
+repeat_size = Vector2(0, 1024)
+autoscroll = Vector2(0, 100)
+follow_viewport = false
+ignore_camera_scroll = true
+script = ExtResource("1_iywne")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Grama" unique_id=1641274163]
+position = Vector2(80, 312)
+scale = Vector2(4, 4)
+texture = ExtResource("4_0tnpc")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Level" unique_id=1270968333]
 metadata/_edit_group_ = true
@@ -53,7 +99,7 @@ position = Vector2(133, 321)
 shape = SubResource("RectangleShape2D_4g3bo")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Level" unique_id=1011235894]
-position = Vector2(1273, 4)
+position = Vector2(1232, 0)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/StaticBody2D2" unique_id=1248715933]

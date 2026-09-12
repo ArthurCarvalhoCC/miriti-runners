@@ -22,6 +22,7 @@ size = Vector2(375, 11)
 size = Vector2(126, 11)
 
 [node name="Game" type="Node2D" unique_id=549706062]
+metadata/_edit_horizontal_guides_ = [-1276.0]
 
 [node name="Level" type="Node2D" parent="." unique_id=1282701317]
 position = Vector2(-580, -324)
@@ -54,7 +55,7 @@ texture = ExtResource("3_vtaks")
 [node name="Rua" type="Parallax2D" parent="Level" unique_id=330106772]
 repeat_size = Vector2(0, 256)
 autoscroll = Vector2(0, 100)
-repeat_times = 5
+repeat_times = 6
 follow_viewport = false
 ignore_camera_scroll = true
 script = ExtResource("1_iywne")
@@ -63,7 +64,7 @@ script = ExtResource("1_iywne")
 position = Vector2(1280, 0)
 scale = Vector2(4, 4)
 texture = ExtResource("2_u5sy4")
-offset = Vector2(64, 0)
+offset = Vector2(64, 128)
 
 [node name="Arvores" type="Parallax2D" parent="Level" unique_id=581362194]
 repeat_size = Vector2(0, 1024)
@@ -136,3 +137,4 @@ shape = SubResource("RectangleShape2D_iywne")
 position = Vector2(-6, 192)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2139342966]
+position = Vector2(2, 51)
